@@ -189,42 +189,41 @@ const updateProduct = async () => {
 }
 
 
-// Delete Product Method
 const deleteProduct = (product, index) => {
-    swal.fire({
+    Swal.fire({
         title: 'Are you Sure',
-        text: "These actions are irreversible!",
+        text: "This actions cannot undo!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        cancelButtonText: 'No',
-        confirmButtonText: 'Yes, delete!'
+        cancelButtonText: 'no',
+        confirmButtonText: 'yes, delete!'
     }).then((result) => {
         if (result.isConfirmed) {
             try {
                 router.delete('products/destroy/' + product.id, {
                     onSuccess: (page) => {
-                        this.products.splice(index, 1);
-
-                        swal.fire({
+                        this.delete(product, index);
+                        Swal.fire({
                             toast: true,
                             icon: "success",
                             position: "top-end",
                             showConfirmButton: false,
                             title: page.props.flash.success
                         });
-
-                        // Reload the page to reflect the deletion or update the products list
-                        window.location.reload(); // Force reload to get the latest data
                     }
-                });
+                })
             } catch (err) {
-                console.log(err);
+                console.log(err)
             }
         }
-    });
+    })
+
 }
+
+
+
 </script>
 
 <template>

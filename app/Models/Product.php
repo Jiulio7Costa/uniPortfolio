@@ -6,6 +6,7 @@ namespace App\Models;
 use App\Models\Brand;
 use App\Models\CartItem;
 use App\Models\Category;
+use App\Models\OrderItem;
 use App\Models\ProductImage;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -73,5 +74,9 @@ class Product extends Model
         
 
     }
+    public function orderItems()
+{
+    return $this->hasMany(OrderItem::class, 'product_id');
+}
    
 }

@@ -100,10 +100,11 @@ class ProductController extends Controller
         return redirect()->route('admin.products.index')->with('success', 'Image is deleted successfully');
 
     }
-    public function destroy($id)
+    
+    public function destory($id)
     {
         $product = Product::findOrFail($id)->delete();
-        return redirect()->route('admin.products.index')->with('success', 'Product is deleted successfully.');
+        return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully.');
     }
 
 }
