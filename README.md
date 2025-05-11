@@ -7,16 +7,24 @@
    cd "Uni Project/portfolio"
 
 2.**Install PHP Dependencies**
+
+
 composer install
 
 3. **Copy and Configure Environment File**
+
+   
 cp .env.example .env
 php artisan key:generate
 
 4.**Set your Stripe API key**
+
+
 Open the .env file and replace the value of STRIPE_KEY with your actual Stripe API key.
 
 5.**Set Up the Database**
+
+
 php artisan migrate
 php artisan db:seed
 Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders in the database/seeders folder.  
@@ -30,9 +38,13 @@ npm run dev
 For Stripe Api key, please go to .env file and replace with your api key for this variable STRIPE_KEY="REPLACE WITH YOUR STRIP API KEY HERE"
 
 7.**Start Laravel Server**
+
+
 php artisan serve
 
 ## Admin Functionality
+
+
 To access the admin panel:
 1.Register a new user through the website (frontend).
 2.Open your database .
