@@ -15,6 +15,7 @@ composer install
 
    
 cp .env.example .env
+
 php artisan key:generate
 
 4.**Set your Stripe API key**
@@ -26,7 +27,9 @@ Open the .env file and replace the value of STRIPE_KEY with your actual Stripe A
 
 
 php artisan migrate
+
 php artisan db:seed
+
 Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders in the database/seeders folder.  
 
 
@@ -34,7 +37,9 @@ Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders 
 
 
 npm install
+
 npm run dev
+
 For Stripe Api key, please go to .env file and replace with your api key for this variable STRIPE_KEY="REPLACE WITH YOUR STRIP API KEY HERE"
 
 7.**Start Laravel Server**
@@ -46,9 +51,13 @@ php artisan serve
 
 
 To access the admin panel:
+
 1.Register a new user through the website (frontend).
+
 2.Open your database .
+
 3.Go to the users table.
+
 4.Find your user entry and set the isAdmin field to 1.
 
 Save the changes and refresh the website—admin features should now be available.
