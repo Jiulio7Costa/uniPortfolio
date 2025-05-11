@@ -1,7 +1,7 @@
 # uniPortfolio
 ## Installation Steps
 
-1. **Clone the repository**
+1.**Clone the repository**
    ```bash
    git clone https://github.com/Jiulio7Costa/uniPortfolio.git
    cd "Uni Project/portfolio"
@@ -22,7 +22,6 @@ Open the .env file and replace the value of STRIPE_KEY with your actual Stripe A
 
 5.**Set Up the Database**
 
-
 php artisan migrate
 
 php artisan db:seed
@@ -30,8 +29,7 @@ php artisan db:seed
 Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders in the database/seeders folder.  
 
 
-6. **Install Node Modules and Compile Assets**
-
+6.**Install Node Modules and Compile Assets**
 
 npm install
 
