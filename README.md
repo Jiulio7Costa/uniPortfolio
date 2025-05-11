@@ -19,9 +19,12 @@ Open the .env file and replace the value of STRIPE_KEY with your actual Stripe A
 5.**Set Up the Database**
 php artisan migrate
 php artisan db:seed
-Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders in the database/seeders folder.
+Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders in the database/seeders folder.  
+
 
 6. **Install Node Modules and Compile Assets**
+
+
 npm install
 npm run dev
 For Stripe Api key, please go to .env file and replace with your api key for this variable STRIPE_KEY="REPLACE WITH YOUR STRIP API KEY HERE"
