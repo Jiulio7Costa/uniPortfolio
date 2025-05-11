@@ -10,15 +10,13 @@
 
  composer install
 
-3. **Copy and Configure Environment File**
+3.**Copy and Configure Environment File**
 
-   
 cp .env.example .env
 
 php artisan key:generate
 
 4.**Set your Stripe API key**
-
 
 Open the .env file and replace the value of STRIPE_KEY with your actual Stripe API key.
 
