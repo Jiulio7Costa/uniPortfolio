@@ -8,9 +8,11 @@
 
 2.**Install PHP Dependencies**
 
+
  composer install
 
 3.**Copy and Configure Environment File**
+
 
 cp .env.example .env
 
@@ -18,9 +20,11 @@ php artisan key:generate
 
 4.**Set your Stripe API key**
 
+
 Open the .env file and replace the value of STRIPE_KEY with your actual Stripe API key.
 
 5.**Set Up the Database**
+
 
 php artisan migrate
 
@@ -30,6 +34,7 @@ Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders 
 
 
 6.**Install Node Modules and Compile Assets**
+
 
 npm install
 
@@ -56,6 +61,7 @@ To access the admin panel:
 4.Find your user entry and set the isAdmin field to 1.
 
 Save the changes and refresh the website—admin features should now be available.
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
