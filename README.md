@@ -1,5 +1,5 @@
 # uniPortfolio
-Installation Steps
+##Installation Steps
 1.Clone the repository
 git clone https://github.com/Jiulio7Costa/uniPortfolio.git
 cd "Uni Project/portfolio"
@@ -22,7 +22,7 @@ npm run dev
 6.Start Laravel Server
 php artisan serve
 
-Admin Functionality
+##Admin Functionality
 To access the admin panel:
 1.Register a new user through the website (frontend).
 2.Open your database .
