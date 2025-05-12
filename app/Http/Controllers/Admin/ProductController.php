@@ -101,7 +101,7 @@ class ProductController extends Controller
 
     }
     
-    public function destory($id)
+    public function destroy($id)
     {
         $product = Product::findOrFail($id)->delete();
         return redirect()->route('admin.products.index')->with('success', 'Product deleted successfully.');

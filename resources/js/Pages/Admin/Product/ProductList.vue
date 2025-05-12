@@ -3,6 +3,8 @@ import { router, usePage } from '@inertiajs/vue3';
 import { Plus } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 
+import Swal from 'sweetalert2';
+
 defineProps({
     products: Array
 })
