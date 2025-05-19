@@ -7,9 +7,8 @@
    git clone https://github.com/Jiulio7Costa/uniPortfolio.git
    cd "Uni Project/portfolio"
    
-2.Install PHP Dependencies
-
 composer install
+
 
 3.Copy and Configure the Environment File
 
