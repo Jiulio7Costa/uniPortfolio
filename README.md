@@ -1,129 +1,120 @@
-# uniPortfolio
-## Installation Steps
+# UniPortfolio
 
-1. **Clone the repository**  
+## 🛠 Installation Steps
+
+1. **Clone the Repository**
    ```bash
    git clone https://github.com/Jiulio7Costa/uniPortfolio.git
    cd "Uni Project/portfolio"
+Install PHP Dependencies
 
-2.**Install PHP Dependencies**
+bash
+Copy
+Edit
+composer install
+Copy and Configure the Environment File
 
- composer install
-
-3.**Copy and Configure Environment File**
-
+bash
+Copy
+Edit
 cp .env.example .env
-
 php artisan key:generate
+Set Your Stripe API Key
 
-4.**Set your Stripe API key**
+Open the .env file and replace the value of STRIPE_KEY:
 
+env
+Copy
+Edit
+STRIPE_KEY="your_actual_stripe_key_here"
+Set Up the Database
 
-Open the .env file and replace the value of STRIPE_KEY with your actual Stripe API key.
-
-5.**Set Up the Database**
-
-
+bash
+Copy
+Edit
 php artisan migrate
-
 php artisan db:seed
+php artisan db:seed --class=AdminSeeder
+Install Node Modules and Compile Assets
 
-Run php artisan db:seed --class=AdminSeeder to test. You can find other seeders in the database/seeders folder.  
-
-
-6.**Install Node Modules and Compile Assets**
-
-
+bash
+Copy
+Edit
 npm install
-
 npm run dev
+Start the Laravel Development Server
 
-For Stripe Api key, please go to .env file and replace with your api key for this variable STRIPE_KEY="REPLACE WITH YOUR STRIP API KEY HERE"
-
-7.**Start Laravel Server**
-
-
+bash
+Copy
+Edit
 php artisan serve
+🔐 Admin Access
+Register a new user via the frontend.
 
-## Admin Functionality
+Open your database and go to the users table.
 
+Locate your user and set the isAdmin field to 1.
 
-To access the admin panel:
+Refresh the app—admin features will now be visible.
 
-1.Register a new user through the website (frontend).
+✅ Test Cases
+Here are sample test cases to guide functionality checking:
 
-2.Open your database .
+🛍️ User-side Functional Tests
+1. Add to Cart from Home Page
+Action: Hover over a preferred product.
 
-3.Go to the users table.
+Click: Blue cart icon.
 
-4.Find your user entry and set the isAdmin field to 1.
+Then: Click the black cart icon in the top-right.
 
-Save the changes and refresh the website—admin features should now be available.
+Expected Result: Cart page opens with the selected item.
 
+2. Adjust Cart Quantities
+Action: In the cart, increase or decrease product quantity.
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Expected Result: Subtotal updates accordingly.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+3. Remove Product from Cart
+Action: Click the remove (X) button.
 
-## About Laravel
+Expected Result: Product is removed and the cart updates.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+4. Checkout Process
+Action: Fill in the address fields (only needed for the first checkout).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Click: "Checkout" button.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Expected Result: Order confirmation screen appears.
 
-## Learning Laravel
+5. View Product Details
+Action: Hover over a product and click the eye icon.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Expected Result: Redirect to the product detail page.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Click: Use image slider arrows to view multiple images.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Click: Add to cart and proceed to checkout as above.
 
-## Laravel Sponsors
+🧑‍💼 Admin Dashboard Tests
+1. Add Product
+Action: In the admin panel, go to the "Products" page.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Click: "Add Product" button.
 
-### Premium Partners
+Fill Form: Enter product details and submit.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Expected Result: Success alert appears, product added to list.
 
-## Contributing
+2. Edit Product
+Action: Click the "Edit" button next to a product.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Update: Change product details and save.
 
-## Code of Conduct
+Expected Result: Success message; product list updates with new info.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+3. Delete Product
+Action: Click the "Delete" icon.
 
-## Security Vulnerabilities
+Expected Result: Confirmation alert; product is removed from list.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
