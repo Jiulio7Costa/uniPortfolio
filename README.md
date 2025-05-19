@@ -92,7 +92,8 @@ Click: Use image slider arrows to view multiple images.
 
 Click: Add to cart and proceed to checkout as above.
 
-🧑‍💼 Admin Dashboard Tests
+### **🧑‍💼 Admin Dashboard Tests**
+
 ### **1. Add Product**
 Action: In the admin panel, go to the "Products" page.
 
