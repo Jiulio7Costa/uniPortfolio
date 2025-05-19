@@ -6,47 +6,35 @@
    ```bash
    git clone https://github.com/Jiulio7Costa/uniPortfolio.git
    cd "Uni Project/portfolio"
-Install PHP Dependencies
+   
+2.Install PHP Dependencies
 
-bash
-Copy
-Edit
 composer install
-Copy and Configure the Environment File
 
-bash
-Copy
-Edit
+3.Copy and Configure the Environment File
+
 cp .env.example .env
 php artisan key:generate
 Set Your Stripe API Key
 
 Open the .env file and replace the value of STRIPE_KEY:
 
-env
-Copy
-Edit
+
 STRIPE_KEY="your_actual_stripe_key_here"
 Set Up the Database
 
-bash
-Copy
-Edit
+
 php artisan migrate
 php artisan db:seed
 php artisan db:seed --class=AdminSeeder
 Install Node Modules and Compile Assets
 
-bash
-Copy
-Edit
+
 npm install
 npm run dev
 Start the Laravel Development Server
 
-bash
-Copy
-Edit
+
 php artisan serve
 🔐 Admin Access
 Register a new user via the frontend.
