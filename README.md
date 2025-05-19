@@ -43,7 +43,7 @@ npm run dev
 php artisan serve
 ```
 
-**🔐 Admin Access**
+### **🔐 Admin Access**
 Register a new user via the frontend.
 
 Open your database and go to the users table.
