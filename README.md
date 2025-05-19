@@ -52,10 +52,11 @@ Locate your user and set the isAdmin field to 1.
 
 Refresh the app—admin features will now be visible.
 
-✅ Test Cases
+### ✅ Test Cases
 Here are sample test cases to guide functionality checking:
 
-🛍️ User-side Functional Tests
+### **🛍️ User-side Functional Tests**
+
 ### **1. Add to Cart from Home Page**
 Action: Hover over a preferred product.
 
