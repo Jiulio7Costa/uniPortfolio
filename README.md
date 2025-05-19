@@ -8,7 +8,7 @@
    cd "Uni Project/portfolio"
 ```
    
-### **2.Install PHP Dependencies   **
+### **2.Install PHP Dependencies**
 ```sh
 composer install
 ```
