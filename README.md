@@ -2,12 +2,16 @@
 
 ## 🛠 Installation Steps
 
-1. **Clone the Repository**
-   ```bash
+### **1.Clone the Repository**
+   ```sh
    git clone https://github.com/Jiulio7Costa/uniPortfolio.git
    cd "Uni Project/portfolio"
+```
    
+### **2.Install PHP Dependencies   **
+```sh
 composer install
+```
 
 
 3.Copy and Configure the Environment File
