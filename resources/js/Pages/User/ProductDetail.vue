@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 import { router } from "@inertiajs/vue3";
 import Swiper from 'swiper/bundle'
 import 'swiper/css/bundle'
@@ -13,16 +13,19 @@ defineProps({
 const swiperRef = ref(null)
 
 onMounted(() => {
-    new Swiper(swiperRef.value, {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    })
-})
+    // Used $nextTick to ensure DOM is fully rendered before Swiper initializes
+    nextTick(() => {
+        new Swiper('.swiper', {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+});
 const addToCart = (product) => {
     console.log(product);
     router.post(route("cart.store", product), {
@@ -30,7 +33,7 @@ const addToCart = (product) => {
             if (page.props.flash.success) {
                 Swal.fire({
                     toast: true,
-                    icon: "Success",
+                    icon: "success",
                     position: "top-end",
                     showConfirmationButton: false,
                     title: page.props.flash.success,
@@ -44,7 +47,8 @@ const addToCart = (product) => {
 <template>
     <UserLayouts>
         <div class="bg-gray-100 py-10">
-            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8">
+            <div class="flex-grow overflow-y-auto bg-gray-100 py-10">
+                <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8">
 
                 <!-- Left side Product Images -->
                 <div class="w-full md:w-1/2">
@@ -79,6 +83,7 @@ const addToCart = (product) => {
                         class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 focus:outline-none transition">
                         Add to Cart
                     </a>
+                </div>
                 </div>
             </div>
         </div>
