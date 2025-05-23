@@ -72,7 +72,7 @@ Action: In the cart, increase or decrease product quantity.
 Expected Result: Subtotal updates accordingly.
 
 ### **3. Remove Product from Cart**
-Action: Click the remove (X) button.
+Action: Click the remove in the cart page next to quantity modifications.
 
 Expected Result: Product is removed and the cart updates.
 
@@ -81,7 +81,7 @@ Action: Fill in the address fields (only needed for the first checkout).
 
 Click: "Checkout" button.
 
-Expected Result: Order confirmation screen appears.
+Expected Result: In the dashboard order transactions details updates.
 
 ### **5. View Product Details**
 Action: Hover over a product and click the eye icon.
@@ -104,14 +104,14 @@ Fill Form: Enter product details and submit.
 Expected Result: Success alert appears, product added to list.
 
 ### **2. Edit Product**
-Action: Click the "Edit" button next to a product.
+Action: In prodcut page, in the list of products go to the right corner where 3 dots appear,click the 3 dots and click the "Edit" button .
 
 Update: Change product details and save.
 
 Expected Result: Success message; product list updates with new info.
 
 ### **3. Delete Product**
-Action: Click the "Delete" icon.
+Action: In prodcut page, in the list of products go to the right corner where 3 dots appear,click the 3 dots and click the "Delete" icon.
 
 Expected Result: Confirmation alert; product is removed from list.
 
