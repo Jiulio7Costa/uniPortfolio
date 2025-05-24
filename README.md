@@ -5,7 +5,7 @@
 ### **1. Clone the Repository**
    ```sh
    git clone https://github.com/Jiulio7Costa/uniPortfolio.git
-   cd "Uni Project/portfolio"
+   cd uniPortfolio
 ```
    
 ### **2. Install PHP Dependencies**
